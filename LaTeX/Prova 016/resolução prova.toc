@@ -1,0 +1,4 @@
+\babel@toc {brazilian}{}
+\contentsline {section}{\numberline {1}O produto tensorial}{1}
+\contentsline {section}{\numberline {2}Conclu\IeC {\'\i }mos}{2}
+\contentsline {section}{Refer\IeC {\^e}ncias}{2}

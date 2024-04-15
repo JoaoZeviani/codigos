@@ -1,0 +1,62 @@
+\documentclass[a4paper,12pt]{book}	
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+%\usepackage[showframe]{geometry}
+\usepackage{amsmath,amscd,amsthm,amssymb,amsxtra,latexsym}
+
+\usepackage{tikz}
+\usepgflibrary{shapes}
+\newcommand*\triangled[1]{\tikz[baseline=(char.base)]{
+            \node[regular polygon, regular polygon sides=3,draw,inner sep=-1pt] (char) {#1};}}
+
+\title{Introdução à Análise Combinatória}
+
+\begin{document}
+\maketitle
+\setlength{\voffset}{-0.75in}
+
+\chapter{}
+\chapter{}
+\chapter{}
+\chapter{}
+\chapter{}
+\chapter{}
+\begin{align}
+a&b\\
+c&d \label{luz}
+\end{align}
+\newpage
+\thispagestyle{empty}
+\hspace{-0.6cm}\textit{256}
+\hfill
+\textit{Introdução à Análise Combinatória}
+\\\\
+$n-3$ é ímpar (resp., par). Aplicando a equação de recorrência a $t_{n-3}$ e usando a informação já adquirida sobre o valor de $t_n$ para $n=3,4 \mbox{ e }5$, reformulamos (\ref{luz}) como segue:
+\begin{align}
+&t_0=0,\quad t_1=0,\quad t_2=0,\quad t_3=1,\quad t_4=0,\quad t_5=1\quad \nonumber \\
+&t_n=\left\{
+\begin{array}{ll}
+\lfloor \frac{n-2}{4} \rfloor+t_{n-6}, \quad \mbox{se } n  \mbox{ é par, }n \geq 6.\\
+\lfloor \frac{n+1}{4} \rfloor+t_{n-6}, \quad \mbox{se } n  \mbox{ é ímpar, }n \geq 6. 
+\end{array} \label{trevas}
+\right.
+\end{align}
+
+Torna-se claro pela relação acima que a sequência $(t_n)$ é na verdade composta por 6 sequências independêntes: \hspace{0.1cm}(i) $(t_0,t_6,t_{12},\dots)$, \hspace{0.1cm}(ii) $(t_1,t_7,t_{13},\dots)$, \hspace{0.1cm}(iii)  $(t_2,t_8,t_{14},\dots)$, \hspace{0.1cm}(iv) $(t_3,t_9,t_{15},\dots)$, \hspace{0.1cm}(v) $(t_4,t_{10},t_{16},\dots)$,\hspace{0.1cm}(vi) $(t_5,t_{11},t_{17},\dots)$. Introduzindo a notação $t_{l+6j}=\triangled{$l$}_j$, temos que a $l^{\underline{\acute{e}sima}}$ sequência especificada é igual à sequência ($\triangled{$l$}_0,\triangled{$l$}_1,\triangled{$l$}_3, \dots)$. Reduzimos, então o problema de calcular uma fórmula fechada para $t_n$ a calcular fórmulas fechadas para cada uma das seis sequências. A vantagem dessa abordagem é que cada uma das novas sequências tem uma relação de recorrência mais simples que (\ref{luz}) e que pode, portanto, ser resolvida com facilidade, tanto pelas técnicas da presente seção, quanto pelas da próxima seção. Ilustramos o procedimento calculando uma fórmula fechada para $\triangled{$0$}_j= t_{0+6j}=t_{6j}$. Substituindo os valores apropriados em (\ref{trevas}), obtendo a seguinte relação de recorrência $\mathbb{l}$:
+\begin{eqnarray}
+\triangled{$0$}_0&=&0\nonumber \\
+\triangled{$0$}_j&=&\lfloor \frac{6j-2}{4} \rfloor+\triangled{$0$}_{j-1} \label{nebuloso}\\
+&=& \frac{3j}{2}-\frac{3}{4}-\frac{1}{4}{(-1)}^j+\triangled{0}_{j-1}, \quad \mbox{para }j\geq{1}. \nonumber
+\end{eqnarray}
+
+Calculamos agora as funções particulares $f(j), d(j) \mbox{ e } b(j)$, associados aos termos $\frac{3j}{2}, -\frac{3}{4} \mbox{ e } -\frac{1}{4}{(-1)}^j$, respectivamente. Para tal, observamos que 1 é a única raiz da equação característica da equação homogênea associada a (\ref{nebuloso}).
+
+$$\left\{
+\begin{array}{cclcl}
+A_0&-&A_1&=&0\\
+&&2A_1& =&\frac{3}{2}.
+\end{array} \label{trevas}
+\right.$$
+
+\end{document}

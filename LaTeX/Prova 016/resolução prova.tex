@@ -1,0 +1,108 @@
+\documentclass[a4paper,11pt]{article}	
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage{amsmath,amscd,amsthm,amssymb,amsxtra,latexsym}
+\usepackage{xcolor}
+\usepackage[all]{xy}
+
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{prop}[teorema]{Proposição}
+\newtheorem{corolario}[teorema]{Corolário}
+\newtheorem{conjectura}{Conjectura}
+\theoremstyle{definition}
+\newtheorem{definicao}{Definição}[section]
+\newtheorem{obs}{Observação}
+\newtheorem{exemplo}{Exemplo}
+
+\title{MA750 - Prova 1}
+\author{Nome: João Vitor Zeviani	 \ \ RA: 199947}
+\date{26/09/2018}
+
+\begin{document}
+\begin{table}[htpb]
+\maketitle
+\renewcommand\contentsname{Conteúdo}
+\tableofcontents
+\ 
+
+\hspace{.8cm} Começamos nossa prova, gostaria de lembrar que:
+
+\begin{description}
+\item[i)] tem que ficar tranquilos, respira fundo e pense que você sabe resolver esta prova
+{\color{red} \item[ii)] é extremamente proibido copiar de um companheiro. Pessoas que foram descobertas intercambiar informação, com qualquer meio, vão ter nota zero. Não podemos queixar-nos de um mundo desonesto se não damos o exemplo.}
+\end{description}
+\end{table}
+\vspace{-0.8cm}
+\section{O produto tensorial}
+Podemos encontrar mais detalhes em  \cite{SLang}. Sejam $U$ e $W$ espaços vetorias de dimensão $n$ sobre um corpo $\mathbb{K}$
+\begin{definicao}
+Diremos que um espaço  vetorial denotado por $V \otimes W$, junto com uma aplicação bilinear
+
+\begin{equation}
+\begin{array}{cccc}
+\alpha:& V \times W & \longrightarrow & V \otimes W\\
+& (v,w) & \mapsto & v \otimes w
+\end{array}\nonumber
+\end{equation}
+é o produto tensorial de $V$ e $W$ se, ao considerarmos um outro espaço vetorial $U$ sobre o mesmo corpo $\mathbb{K}$ e $\beta$ também uma aplicação bilinear:
+\begin{equation}\label{beta}
+\begin{array}{cccc}
+\alpha:& V \times W & \longrightarrow & V \otimes W\\
+& (v,w) & \mapsto & \beta (v,w) 
+\end{array}
+\end{equation}
+afirmamos que existe uma, e somente uma, transformação \begin{em} linear \end{em}
+$$ 
+\mathcal{L}: V \otimes W \rightarrow U
+$$
+
+tal que $\beta(u,w) = \mathcal{L}(u\otimes w)$, isto é, $\beta = \mathcal{L}\circ \alpha$:
+
+\begin{equation}\label{diagram}
+\begin{gathered}
+\xymatrix{
+&V \otimes W \ar[rd]^{\mathcal{L}} & \\
+V \times W \ar[ur]^{\alpha}  \ar[rr]_{\beta}&&U
+}
+\end{gathered}
+\end{equation}
+
+Ou seja, dizemos que a aplicação $\alpha$ é uma aplicação bilinear universal, pois qualquer outra é uma composição de $\alpha$ seguida por uma linear, vejam o diagrama (\ref{diagram}). Esta é a propriedade universal do produto tensorial, também chamada \begin{em} mapeamento universal \end{em} ou \begin{em} universalidade \end{em}.\\
+Mais geralmente, o produto tensorial de $n$ espaços vetorias $ V_1, \dotsc , V_n$ é dado por um espaço vetorial que denotamos por
+$$
+V_1 \otimes \dotsc \otimes V_n,
+$$
+junto com uma aplicação $n$-linear universal:
+$$
+\alpha: V_1 \times \dotsc \times V_n \longrightarrow V_1 \otimes \dotsc \otimes V_n.
+$$
+\end{definicao}
+
+\section{Concluímos}
+Ânimo! Já teminou a prova (ou quasi)
+
+
+\begin{quotation}
+ {\itshape
+Todas as cartas de amor são\\
+Ridículas.\\
+Não seriam cartas de amor de não fossem\\
+Ridículas.
+
+\vspace{.4cm}
+Também escrevi em meu tempo cartas de amor,\\
+Como as outras\\
+Ridículas.
+
+\vspace{.4cm}
+As cartas de amor, se há amor,\\
+Têm de ser\\
+Ridículas.} \footnote{Fernando Pessoa, parte de  \textbf{ \textit {Todas as Cartas de Amor são Ridículas}}}
+\end{quotation}
+\begin{thebibliography}{9}
+\bibitem{SLang} S. Lang \emph{Linear Algebra} Springer, 2013.
+\end{thebibliography}
+\addcontentsline{toc}{section}{Referências}
+\end{document}

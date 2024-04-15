@@ -1,0 +1,111 @@
+\documentclass[a4paper,11pt]{report}	
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\title{mechendo no latex dois.0}
+\author{Xusp} 
+
+\begin{document}
+\maketitle
+\tableofcontents
+\chapter{Listas}
+\section{}
+\begin{samepage} %samepage prevents LaTeX from pagebreaking within one paragraph, i.e. within the samepage envirnment, pagebreaks are only between paragraphs. Thus, you need nopagebreak as well, to prevent LaTeX from pagebreaking between two paragraphs. Além disso, ele não quebra listas!da pra usar o ambiente table
+As 5 melhores bandas do mundo com itemize:
+\begin{itemize}
+\item Dream Theater
+\item The Beatles
+\item Foster the People
+\item The Decemberists
+\item Eminem
+\end{itemize}
+\end{samepage}
+\section{}
+\begin{samepage}
+As 5 melhores bandas do mundo com enumerate:
+\begin{enumerate}
+\item Dream Theater
+\item The Beatles
+\item Foster the People
+\item The Decemberists
+\item Eminem
+\end{enumerate}
+\end{samepage}
+\section{}
+\begin{samepage}
+As 5 melhores bandas do mundo com description:
+\begin{description}
+\item[i.] Dream Theater
+\item[ii.] The Beatles
+\item[iii.] Foster the People
+\item[iv.] The Decemberists
+\item[v.] Eminem
+\end{description}
+\end{samepage}
+\section{}
+\begin{samepage}
+As 5 melhores bandas do mundo com seus respectivos 2 melhores albums:
+\begin{itemize}
+\item Dream Theater
+	\begin{itemize}
+	\item Octavarium
+	\item Metropolis Pt. 2: Scenes from a Memory
+	\end{itemize}
+\item The Beatles
+	\begin{itemize}
+	\item Sgt. Pepper's Lonely Hearts Club Band
+	\item Abbey Road
+	\end{itemize}
+\item Foster the People
+	\begin{itemize}
+	\item Torches
+	\item Sacred Hearts Club
+	\end{itemize}
+\item The Decemberists
+	\begin{itemize}
+	\item The Crane Wife
+	\item The King is Dead
+	\end{itemize}
+\item Eminem
+	\begin{itemize}
+	\item Marshall Mathers
+	\item Encore
+	\end{itemize}
+\end{itemize}
+\end{samepage}
+\section{}
+\begin{samepage}
+As 5 melhores bandas do mundo com o package enumerate: %com o package a formatação fica mais zika
+\begin{enumerate}[i)]
+\item Dream Theater
+\item The Beatles
+\item Foster the People
+\item The Decemberists
+\item Eminem
+\end{enumerate}
+\end{samepage}
+
+\chapter {Tabelas}
+\section{}
+%\marginpar{teste. teste2 teste3 . teste4 teste5}
+Essa é uma tabela com tabbing: %achei bem lixão
+\begin{tabbing}
+2*1.0 \= 2 \\
+2*2 \> 4 \\
+2*3.000 \> 6
+\end{tabbing}
+\section{}
+Essa é uma tabela com tabular:\\\\
+\begin{tabular}{||c|c|c|c||}
+\hline
+\textbf{Pelé} & \textbf{Maradona} & \textbf{Neymar} & \textbf{Xusp}\\
+\hline
+100 & 0 & 50 & 150\\
+\hline
+Jóia & Lixo & Top & Jóp\\
+\hline
+\end{tabular}
+
+\end{document}

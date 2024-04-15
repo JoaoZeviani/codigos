@@ -1,0 +1,115 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3419,        105]
+NotebookOptionsPosition[      2983,         87]
+NotebookOutlinePosition[      3325,        102]
+CellTagsIndexPosition[      3282,         99]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"x", "=", "541651"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"v", "=", "100"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"t", "=", 
+    RowBox[{"Table", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"a", "=", "1"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"For", "[", 
+        RowBox[{
+         RowBox[{"i", "=", "1"}], ",", 
+         RowBox[{"i", "<=", "n"}], ",", 
+         RowBox[{"i", "++"}], ",", 
+         RowBox[{"a", "*=", "i"}]}], "]"}], " ", ";", "\[IndentingNewLine]", 
+       "a"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "v"}], "}"}]}], "\[IndentingNewLine]", "]"}]}], 
+   ";"}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{"For", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"i", "=", "1"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"t", "[", 
+      RowBox[{"[", "i", "]"}], "]"}], "<=", "x"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"b", "=", "i"}]}], "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"t", "=", 
+  RowBox[{"Delete", "[", 
+   RowBox[{"t", ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"c", "+", "1"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"c", ",", "b", ",", 
+        RowBox[{"v", "-", "1"}]}], "}"}]}], "]"}]}], 
+   "]"}]}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.7517366920712414`*^9, 3.7517368769761305`*^9}, {
+  3.7517369194039817`*^9, 3.7517371342510757`*^9}, {3.7517371671387568`*^9, 
+  3.7517371933870263`*^9}, {3.7517372343475466`*^9, 3.751737646869302*^9}, {
+  3.7517376811773443`*^9, 
+  3.751737800647031*^9}},ExpressionUUID->"00e3f13c-e22d-4287-8e45-\
+8c8c6dc49759"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1", ",", "2", ",", "6", ",", "24", ",", "120", ",", "720", ",", "5040", 
+   ",", "40320", ",", "362880"}], "}"}]], "Output",
+ CellChangeTimes->{{3.7517373019377794`*^9, 3.7517373206155605`*^9}, 
+   3.7517373603938828`*^9, 3.7517374147643533`*^9, 3.751737455990061*^9, {
+   3.7517374963317986`*^9, 3.751737508335949*^9}, {3.7517375663081937`*^9, 
+   3.751737647084697*^9}, {3.7517376812880754`*^9, 3.7517378012683744`*^9}, 
+   3.7517507831122847`*^9},ExpressionUUID->"7273031b-0329-48eb-a63d-\
+592616932dd7"]
+}, Open  ]]
+},
+WindowSize->{766, 772},
+WindowMargins->{{Automatic, -7}, {Automatic, 0}},
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 18, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1834, 50, 426, "Input", "ExpressionUUID" -> \
+"00e3f13c-e22d-4287-8e45-8c8c6dc49759"],
+Cell[2417, 74, 550, 10, 30, "Output", "ExpressionUUID" -> \
+"7273031b-0329-48eb-a63d-592616932dd7"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

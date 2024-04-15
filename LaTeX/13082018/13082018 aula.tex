@@ -1,0 +1,45 @@
+\documentclass[a4paper,11pt]{report}	
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\title{mechendo no latex tres.0}
+\author{Xusp} 
+
+\begin{document}
+\maketitle
+\tableofcontents
+\chapter{Listas}
+\begin{tabular}{||p{5cm}||*{3}{l||}} %tente entender o *
+\hline
+\textbf{Pelé} & \textbf{Maradona} & \textbf{Neymar} & \textbf{Xusp}\\
+\hline
+100 & 0 & 50 & 150\\
+\hline
+Jóia & Lixo & Top & Jóp\\
+\hline
+\end{tabular}
+
+\begin{table}[htpb] %sempre usa esse htpb se n o bang sai zuadão, é a ordem que vc manda ele ir 
+\begin{center}
+\begin{tabular}{|lcr|}
+
+\cline{2-2}
+\multicolumn{3}{c}{TA}\\
+\hline
+um um & um dois & um tres\\
+\hline
+dois um & dois dois & dois tres\\
+\hline
+tres um & tres dois & tres tres\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+%se vc quiser usar uma tabela quebráve entre paginas, use o ambiente longtable (mas tem que botar \usepackage)
+
+
+
+\end{document}

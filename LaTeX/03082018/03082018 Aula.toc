@@ -1,0 +1,8 @@
+\babel@toc {brazilian}{}
+\contentsline {chapter}{\numberline {1}primeiro dia}{2}
+\contentsline {section}{\numberline {1.1}primeiras palavras}{2}
+\contentsline {section}{\numberline {1.2}segundas palavras}{2}
+\contentsline {chapter}{\numberline {2}segundo dia}{3}
+\contentsline {section}{\numberline {2.1}teste1}{3}
+\contentsline {section}{\numberline {2.2}teste2}{3}
+\contentsline {chapter}{\numberline {3}segundo dia parte 2}{4}

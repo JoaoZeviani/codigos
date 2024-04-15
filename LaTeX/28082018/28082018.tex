@@ -1,0 +1,61 @@
+\documentclass[a4paper,12pt]{book}	
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+%\usepackage[showframe]{geometry}
+\usepackage{amsmath,amscd,amsthm,amssymb,amsxtra,latexsym}
+
+\newtheorem{exemplo}{Exemplo}[chapter]
+
+ \begin{document}
+
+\setlength{\voffset}{-0.75in}
+\chapter{}
+\chapter{}
+\chapter{}
+\begin{exemplo}
+asdasd
+\end{exemplo}
+\begin{exemplo}
+asdasd
+\end{exemplo}
+\begin{exemplo}
+asdasd
+\end{exemplo}
+\begin{exemplo}
+asdasd
+\end{exemplo}
+\newpage
+\thispagestyle{empty}
+\hspace{-0.6cm}\textit{96}
+\hfill
+\textit{Introdução à Análise Combinatória}
+\\\\
+Se, a cada solução de $x_1+x_2+x_3=20$ em inteiros positivos com $x_2 > 5$, subtrairmos 5 unidades de $x_2$, teremos uma solução, em inteiros positivos, para $y_1+y_2+y_3=15$, onde
+$$
+y_1=x_1,\quad y_2=x_2-5 \; \mbox{ e }\; y_3=x_3
+$$ 
+Como a transformação acima é biunívoca e o número de soluções inteiras positivas de $y_1+y_2+y_3=15$ é $C_{14}^2$, este é o número de soluções inteiras positivas de  $x_1+x_2+x_3=20$, com $x_2>5. _\blacksquare$
+\begin{exemplo}
+Encontrar o número de soluções em inteiros positivos para a inequação
+$$0<x_1+x_2+x_3+x_4 \leq 6$$
+\end{exemplo}
+
+Devemos contar o número de soluções em inteiros positivos para as seguintes equações:
+\begin{eqnarray}
+x_1+x_2+x_3+x_4&=&1;\nonumber \\
+x_1+x_2+x_3+x_4&=&2;\nonumber \\
+x_1+x_2+x_3+x_4&=&3;\nonumber \\
+x_1+x_2+x_3+x_4&=&4;\nonumber \\
+x_1+x_2+x_3+x_4&=&5;\nonumber \\
+x_1+x_2+x_3+x_4&=&6 \nonumber
+\end{eqnarray}
+Como $C_0^3=C_1^3=C_2^3=0$, o número de soluções em inteiros positivos para cada uma das três primeiras equações é zero. Para as três últimas temos, respectivamente, $C_3^3=1, C_4^3=4, C_5^3=10.$ Logo, pelo princípio aditivo, o número procurado é $1+4+100=15._\blacksquare$
+\begin{exemplo}
+Encontrar o número de soluções em inteiros não-negativos de $x_1+x_2+x_3+x_4+x_5=18$, nas quais exatamente 2 incógnitas são nulas.
+\end{exemplo}
+
+
+
+
+\end{document}

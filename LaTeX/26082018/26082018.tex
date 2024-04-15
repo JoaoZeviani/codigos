@@ -1,0 +1,96 @@
+\documentclass[a4paper,12pt]{book}	
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage{enumerate}
+\usepackage{graphicx, wrapfig}
+\usepackage[leftcaption]{sidecap}
+%\usepackage[showframe]{geometry}
+\usepackage{amsmath,amscd,amsthm,amssymb,amsxtra,latexsym}
+\newtheorem{exemplo}{Exemplo}[chapter]
+\title{Introdução à Análise Combinatória}
+
+\begin{document}
+\maketitle
+\setlength{\voffset}{-0.75in}
+
+\chapter{}
+\chapter{}
+\chapter{}
+\chapter{}
+\chapter{Funções geradoras}
+\begin{exemplo}
+asdasd
+\end{exemplo}
+\begin{exemplo}
+asdasd
+\end{exemplo}
+\begin{exemplo}
+asdasd
+\end{exemplo}
+\newpage
+a
+\newpage
+\thispagestyle{empty}
+\hspace{-0.6cm}\textit{156}
+\hfill
+\textit{Introdução à Análise Combinatória}
+\\\\
+mas sempre que estivermos pedindo a função geradora (ordinária) estaremos interessados numa expressão simples (que comumente chamamos de "forma fechada") para a resposta. Neste caso, é fácil ver que
+\begin{eqnarray}
+f(x) & = & x^2+x^3+x^4+x^5+ \cdots \nonumber \\
+& = &x^2(1+x+x^2+x^3+x^4+ \cdots ) \nonumber \\
+& = & x^2\left(\frac{1}{1-x}\right).\blacksquare \nonumber 
+\end{eqnarray}
+\begin{exemplo}
+Encontrar a sequência cuja função geradora é dada por:
+$$g(x)=\frac{1}{1-x^2}.$$
+\end{exemplo}
+Sabemos que 
+$$\frac{1}{1-x}=1+x+x^2+x^3+x^4+ \cdots .$$
+Logo, basta substituirmos $x$ por $x^2$ nesta última expressão, obtendo:
+$$\frac{1}{1-x^2}=1+x^2+x^4+x^6+x^8+ \cdots .$$
+Portanto $g(x)$ é a fução geradora da sequência $(a_r)=(1,0,1,0,1,0,1,\dots).\blacksquare$
+\begin{exemplo}\label{func:ger}
+Encontrar a função geradora para a sequência
+$$(a_r)=\left(1,\frac{1}{1!},\frac{1}{2!},\frac{1}{3!},\frac{1}{4!},\dots \right).$$
+\end{exemplo}
+Sabemos que a exámção em série de potência da função exponencial é igual a:
+$$e^x=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+\cdots +\frac{x^r}{r!}+\cdots .$$
+Logo, a função procurada é $e^x.\blacksquare$
+\newpage
+\thispagestyle{empty}
+\hspace{-0.6cm}\textit{Capítulo 5. Funções geradoras}
+\hfill
+\textit{157}
+\\
+\begin{exemplo}
+Encontrar a sequência cuja função geradora ordinária é $ x^2+x^3+e^x$.
+\end{exemplo}
+Como
+\begin{eqnarray}
+x^2+x^3+e^x & = & x^2+x^3+\left(1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+\cdots \right) \nonumber \\
+& = & 1+x+\left(1+ \frac{1}{2!} \right)x^2+\left(1+ \frac{1}{3!} \right)x^3+\frac{x^4}{4!}+ \cdots , \nonumber 
+\end{eqnarray}
+a sequência gerada por essa função é:
+$$(a_r) = \left( 1,1,1+\frac{1}{2!},1+\frac{1}{3!},\frac{1}{4!},\frac{1}{5!},\cdots,\frac{1}{r!},\cdots \right).\blacksquare$$
+\begin{exemplo}
+Encontrar a função geradora ordinária para a sequência
+\end{exemplo}
+$$ (a_r) =\left(\frac{2^r}{r!}\right).$$
+Observando-se os coeficientes de $x^r$ em 
+$$e^x=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+\cdots +\frac{x^r}{r!}+\cdots ,$$
+é fácil ver que a substituição de $x$ por $2x$, isto é, calculando-se $e^2x$, teremos
+\begin{eqnarray}
+e^{2x} &=& 1+2x+\frac{{(2x)}^2}{2!}+\frac{{(2x)}^3}{3!}+\frac{{(2x)}^4}{4!}+\cdots +\frac{{(2x)}^r}{r!}+\cdots \nonumber \\
+&=& 1+ \left( \frac {2^1}{1!} \right)x+\left( \frac {2^2}{2!} \right)x^2+\left( \frac {2^3}{3!} \right)x^3+\cdots +\left( \frac {2^r}{r!} \right)x^r+ \cdots , \nonumber
+\end{eqnarray}
+o que nos mostra ser $e^{2x}$ a função geradora procurada. $\blacksquare$
+\begin{exemplo}
+Qual o coeficiênte de $x^{23}$ na expanção de ${(1+x^5+x^9)}^6$?
+\end{exemplo}
+Soma de cincos e noves totalizando 23 só pode ser obtida somando-se 2 noves e um 5, isto é, $5+9+9$. Como são 6 fatores iguais a $(1+x^5+x^9)$, devemos escolher dois fatores, tomando $x^9$ em ambos, e
+
+Como vimos no exmeplo \ref{func:ger}
+
+\end{document}
