@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Criação de Personagem de RPG</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        .coluna {
+            width: 25%;
+            float: left;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="coluna">
+        <form id="characterForm">
+            <label for="nome">Nome:</label><br>
+
+            <input type="text" id="nome" name="nome"><br>
+
+            <label for="forca">Força:</label><br>
+            <button type="button" onclick="alterarAtributo('forca', 1)">+</button>
+            <div style="font-size: 20px; font-weight: bold;" id="forca" name="forca">0</div>
+            <button type="button" onclick="alterarAtributo('forca', -1)">-</button><br>
+
+            <label for="agilidade">Agilidade:</label><br>
+            <button type="button" onclick="alterarAtributo('agilidade', 1)">+</button>
+            <div style="font-size: 20px; font-weight: bold;" id="agilidade" name="agilidade">0</div>
+            <button type="button" onclick="alterarAtributo('agilidade', -1)">+</button><br>
+
+            <label for="inteligencia">Inteligência:</label><br>
+            <button type="button" onclick="alterarAtributo('inteligencia', 1)">+</button>
+            <div style="font-size: 20px; font-weight: bold;" id="inteligencia" name="inteligencia">0</div>
+            <button type="button" onclick="alterarAtributo('inteligencia', -1)">-</button><br>
+
+            <label for="lore">Lore:</label><br>
+            <textarea id="lore" name="lore"></textarea><br>
+
+            <input type="submit" value="Criar Personagem">
+
+        </form>
+
+        <p>Vida: <span id="vida">1</span></p>
+        <p>Iniciativa: <span id="iniciativa">1</span></p>
+        <p>Mana: <span id="mana">1</span></p>
+        <p>Pontos restantes: <span id="pontos">15</span></p>
+    </div>
+
+    <div class="coluna">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="5">Loja</th>
+                </tr>
+                <tr>
+                    <th>Foto</th>
+                    <th style="width:200px;">Nome</th>
+                    <th style="width:50px;">Preço</th>
+                    <th style="width:220px;">Descrição</th>
+                    <th>Botão</th>
+                </tr>
+            </thead>
+            <tbody id="itensLoja">
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="coluna">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="5">Meus Itens</th>
+                </tr>
+                <tr>
+                    <th>Foto</th>
+                    <th style="width:200px;">Nome</th>
+                    <th style="width:50px;">Preço</th>
+                    <th style="width:220px;">Descrição</th>
+                    <th>Botão</th>
+                </tr>
+            </thead>
+            <tbody id="meusItens">
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="coluna">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Habilidades Disponíveis</th>
+                </tr>
+                <tr>
+                    <th style="width:150px;">Nome</th>
+                    <th style="width:350px;">Descrição</th>
+                </tr>
+            </thead>
+            <tbody id="habilidades">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="habilidades.js"></script>
+    <script src="itens.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

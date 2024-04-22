@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <!-- This is the div for the checkboxes -->
+    <div id="checkboxes" style="display: grid; grid-template-columns: 1fr 1fr;">
+        <!-- This is the div for the attribute checkboxes -->
+        <div id="attributeCheckboxes">
+            <input type="checkbox" id="str" name="str" value="str">
+            <label for="str">Strength</label><br>
+            <input type="checkbox" id="agi" name="agi" value="agi">
+            <label for="agi">Agility</label><br>
+            <input type="checkbox" id="int" name="int" value="int">
+            <label for="int">Intelligence</label><br>
+            <input type="checkbox" id="all" name="all" value="all">
+            <label for="all">Universal</label><br>
+        </div>
+
+        <!-- This is the div for the role checkboxes -->
+        <div id="roleCheckboxes">
+            <input type="checkbox" id="Initiator" name="Initiator" value="Initiator">
+            <label for="Initiator">Initiator</label><br>
+            <input type="checkbox" id="Durable" name="Durable" value="Durable">
+            <label for="Durable">Durable</label><br>
+            <input type="checkbox" id="Disabler" name="Disabler" value="Disabler">
+            <label for="Disabler">Disabler</label><br>
+            <input type="checkbox" id="Carry" name="Carry" value="Carry">
+            <label for="Carry">Carry</label><br>
+            <input type="checkbox" id="Nuker" name="Nuker" value="Nuker">
+            <label for="Nuker">Nuker</label><br>
+            <input type="checkbox" id="Escape" name="Escape" value="Escape">
+            <label for="Escape">Escape</label><br>
+            <input type="checkbox" id="Pusher" name="Pusher" value="Pusher">
+            <label for="Pusher">Pusher</label><br>
+        </div>
+    </div>
+
+    <button onclick="logFilteredHeroes()">Show Heroes</button>
+
+    <!-- This is the div where the logs will be displayed -->
+    <div id="log"></div>
+
+    <script src="hero.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
